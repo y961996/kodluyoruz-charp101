@@ -1,0 +1,16 @@
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\bin\Debug\net5.0\if-else.exe
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\bin\Debug\net5.0\if-else.deps.json
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\bin\Debug\net5.0\if-else.runtimeconfig.json
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\bin\Debug\net5.0\if-else.runtimeconfig.dev.json
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\bin\Debug\net5.0\if-else.dll
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\bin\Debug\net5.0\ref\if-else.dll
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\bin\Debug\net5.0\if-else.pdb
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\obj\Debug\net5.0\if-else.csproj.AssemblyReference.cache
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\obj\Debug\net5.0\if-else.GeneratedMSBuildEditorConfig.editorconfig
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\obj\Debug\net5.0\if-else.AssemblyInfoInputs.cache
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\obj\Debug\net5.0\if-else.AssemblyInfo.cs
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\obj\Debug\net5.0\if-else.csproj.CoreCompileInputs.cache
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\obj\Debug\net5.0\if-else.dll
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\obj\Debug\net5.0\ref\if-else.dll
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\obj\Debug\net5.0\if-else.pdb
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\if-else\obj\Debug\net5.0\if-else.genruntimeconfig.cache
