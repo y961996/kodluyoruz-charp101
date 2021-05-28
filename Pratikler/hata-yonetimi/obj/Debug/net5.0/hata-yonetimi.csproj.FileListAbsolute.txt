@@ -1,0 +1,16 @@
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\bin\Debug\net5.0\hata-yonetimi.exe
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\bin\Debug\net5.0\hata-yonetimi.deps.json
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\bin\Debug\net5.0\hata-yonetimi.runtimeconfig.json
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\bin\Debug\net5.0\hata-yonetimi.runtimeconfig.dev.json
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\bin\Debug\net5.0\hata-yonetimi.dll
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\bin\Debug\net5.0\ref\hata-yonetimi.dll
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\bin\Debug\net5.0\hata-yonetimi.pdb
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\obj\Debug\net5.0\hata-yonetimi.csproj.AssemblyReference.cache
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\obj\Debug\net5.0\hata-yonetimi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\obj\Debug\net5.0\hata-yonetimi.AssemblyInfoInputs.cache
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\obj\Debug\net5.0\hata-yonetimi.AssemblyInfo.cs
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\obj\Debug\net5.0\hata-yonetimi.csproj.CoreCompileInputs.cache
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\obj\Debug\net5.0\hata-yonetimi.dll
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\obj\Debug\net5.0\ref\hata-yonetimi.dll
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\obj\Debug\net5.0\hata-yonetimi.pdb
+D:\Kodluyoruz\Patika\kodluyoruz-csharp101\Pratikler\hata-yonetimi\obj\Debug\net5.0\hata-yonetimi.genruntimeconfig.cache
