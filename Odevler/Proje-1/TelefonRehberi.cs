@@ -8,7 +8,9 @@ namespace Proje_1
     private List<Kişi> rehber;
     public List<Kişi> Rehber { get => rehber; set => rehber = value; }
 
-    public TelefonRehberi(){}
+    public TelefonRehberi(){
+      rehber = new List<Kişi>();
+    }
 
     public void RehbereKişiEkle()
     {

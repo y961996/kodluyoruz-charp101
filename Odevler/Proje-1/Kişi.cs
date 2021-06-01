@@ -22,7 +22,9 @@ namespace Proje_1
 
     public void KişiBilgileri()
     {
-      Console.WriteLine("Kişi Bilgilerini yazdır...");
+      Console.WriteLine("Isim: " + this.isim);
+      Console.WriteLine("Soyisim" + this.soyisim);
+      Console.WriteLine("Telefon Numarasi: " + this.numara);
     }
   }
 }

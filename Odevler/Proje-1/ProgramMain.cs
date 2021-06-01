@@ -6,12 +6,14 @@ namespace Proje_1
   {
     public static void Main(string[] args)
     {
+      TelefonRehberi rehber = new TelefonRehberi();
+
       int choice;
       do
       {
         PrintMenu();
         choice = int.Parse(Console.ReadLine());
-        handleChoice(choice);
+        handleChoice(choice, rehber);
       } while (choice > 0 && choice <= 5);
     }
 
@@ -27,9 +29,16 @@ namespace Proje_1
       Console.WriteLine();
     }
 
-    public static void handleChoice(int choice)
+    public static void handleChoice(int choice, TelefonRehberi rehber)
     {
-      
+      switch (choice)
+      {
+          case 1:
+            rehber.RehbereKişiEkle();
+            break;
+          default:
+            break;
+      }
     }
   }
 }
