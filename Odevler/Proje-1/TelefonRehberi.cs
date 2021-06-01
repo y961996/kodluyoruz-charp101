@@ -39,7 +39,9 @@ namespace Proje_1
       Console.WriteLine("Lütfen numarasını silmek istediğiniz kişinin adını ya da soyadını giriniz:");
       string input = Console.ReadLine();
       if(IsimVeyaSoyisimeGoreAra(input)){
-        Console.WriteLine(input + " isimli kişi rehberden silinmek üzere, onaylıyor musunuz ?(y/n)");
+        int idx = returnIndexIsimSoyisim(input);
+        string isimSoyisim = this.rehber[idx].Isim + " " + this.rehber[idx].Soyisim;
+        Console.WriteLine(isimSoyisim + " isimli kişi rehberden silinmek üzere, onaylıyor musunuz ?(y/n)");
         string opt = Console.ReadLine();
         if(opt.Equals("y")){
           for(int i = 0; i < this.rehber.Count; i++){
@@ -68,13 +70,22 @@ namespace Proje_1
       return false;
     }
 
+    private int returnIndexIsimSoyisim(string s){
+      for(int i = 0; i < this.rehber.Count; i++){
+        if(this.rehber[i].Isim.Equals(s) || this.rehber[i].Soyisim.Equals(s)) return i;
+      }
+      return -1;
+    }
+
     public void NumaraGüncelle()
     {
       Console.WriteLine("Lütfen numarasını güncellemek istediğiniz kişinin adını ya da soyadını giriniz:");
       string input = Console.ReadLine();
-      if(RehberdeAramaYapma())
+      if(IsimVeyaSoyisimeGoreAra(input))
       {
+        int idx = returnIndexIsimSoyisim(input);
         // Numarayı güncelle.
+        Console.Write(this.rehber[idx].Isim + this.rehber[idx].Soyisim + " adli kisinin yeni numarasini giriniz: ");
       }
       else
       {
