@@ -38,7 +38,7 @@ namespace Proje_1
     {
       Console.WriteLine("Lütfen numarasını silmek istediğiniz kişinin adını ya da soyadını giriniz:");
       string input = Console.ReadLine();
-      if(RehberdeAramaYapma()){
+      if(IsimVeyaSoyisimeGoreAra(input)){
         Console.WriteLine(input + " isimli kişi rehberden silinmek üzere, onaylıyor musunuz ?(y/n)");
       } 
       else
@@ -47,6 +47,11 @@ namespace Proje_1
         Console.WriteLine("* Silmeyi sonlandırmak için : (1)");
         Console.WriteLine("* Yeniden denemek için      : (2)");
       }
+    }
+
+    private bool IsimVeyaSoyisimeGoreAra(string s){
+      this.rehber.ForEach(kisi => Console.WriteLine(kisi.Isim));
+      return false;
     }
 
     public void NumaraGüncelle()
