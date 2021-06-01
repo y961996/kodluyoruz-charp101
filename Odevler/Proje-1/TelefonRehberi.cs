@@ -10,6 +10,12 @@ namespace Proje_1
 
     public TelefonRehberi(){
       rehber = new List<Kişi>();
+
+      rehber.Add(new Kişi("Elpis", "Brianna", 5555555555));
+      rehber.Add(new Kişi("Earline", "Shandar", 1234567890));
+      rehber.Add(new Kişi("Halim", "Annice", 5515510909));
+      rehber.Add(new Kişi("Yelizaveta", "Jouko", 5055051122));
+      rehber.Add(new Kişi("Adriano", "Jenni", 5068963256));
     }
 
     public void RehbereKişiEkle()
