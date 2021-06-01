@@ -36,6 +36,18 @@ namespace Proje_1
           case 1:
             rehber.RehbereKişiEkle();
             break;
+          case 2:
+            rehber.RehberdenKişiSil();
+            break;
+          case 3:
+            rehber.NumaraGüncelle();
+            break;
+          case 4:
+            rehber.RehberiListele();
+            break;
+          case 5:
+            rehber.RehberdeAramaYapma();
+            break;
           default:
             break;
       }
