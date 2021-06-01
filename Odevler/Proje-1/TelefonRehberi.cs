@@ -70,9 +70,23 @@ namespace Proje_1
       return false;
     }
 
+    private bool NumarayaGoreAra(long n){
+      for(int i = 0; i < this.rehber.Count; i++){
+        if(this.rehber[i].Numara == n) return true;
+      }
+      return false;
+    }
+
     private int returnIndexIsimSoyisim(string s){
       for(int i = 0; i < this.rehber.Count; i++){
         if(this.rehber[i].Isim.Equals(s) || this.rehber[i].Soyisim.Equals(s)) return i;
+      }
+      return -1;
+    }
+
+    private int returnIndexNumara(long n){
+      for(int i = 0; i < this.rehber.Count; i++){
+        if(this.rehber[i].Numara == n) return i;
       }
       return -1;
     }
@@ -119,17 +133,85 @@ namespace Proje_1
       Console.WriteLine();
     }
 
-    public List<int> RehberdeAramaYapma()
+    public void KişiListesiEkranaYazdır(List<Kişi> kişiler)
     {
-      List<int> idxs = new List<int>();
-
-      Console.WriteLine();
-
-      for(){
-        
+      foreach (var kişi in kişiler)
+      {
+        Console.WriteLine("isim: " + kişi.Isim);
+        Console.WriteLine("Soyisim: " + kişi.Soyisim);
+        Console.WriteLine("Telefon Numarası: " + kişi.Numara);
+        Console.WriteLine("-");
       }
 
-      return idxs;
+      Console.WriteLine();
+    }
+
+    public void RehberdeAramaYapma()
+    {
+      List<Kişi> bulunanKişiler = new List<Kişi>();
+
+      Console.WriteLine("Arama yapmak istediğiniz tipi seçiniz.");
+      Console.WriteLine("**********************************************");
+
+      Console.WriteLine("İsim veya soyisime göre arama yapmak için: (1)");
+      Console.WriteLine("Telefon numarasına göre arama yapmak için: (2)");
+      string opt = Console.ReadLine();
+
+      if(opt.Equals("1"))       // İsim ve soyisme göre
+      {
+        Console.Write("Luften aradığınız kişinin adını yada soyadını giriniz: ");
+        string inp = Console.ReadLine();
+        if(IsimVeyaSoyisimeGoreAra(inp))
+        {
+          for(int i = 0; i < this.rehber.Count; i++){
+            if(this.rehber[i].Isim.Equals(inp) || this.rehber[i].Soyisim.Equals(inp)){
+              bulunanKişiler.Add(this.rehber[i]);
+            }
+          }
+        }
+        else
+        {
+          Console.WriteLine("Aradığınız krtiterlere uygun veri rehberde bulunamadı. Lütfen bir seçim yapınız.");
+          Console.WriteLine("* Menüye dönmek için         : (1)");
+          Console.WriteLine("* Yeniden denemek için       : (2)");
+          string scnk = Console.ReadLine();
+          if(scnk.Equals("1")) return;
+          else if(scnk.Equals("2")) RehberdeAramaYapma();
+          else Console.WriteLine("Yanlis secim !");
+        }
+      }
+      else if(opt.Equals("2"))  // Telefon numarasına göre
+      {
+        Console.Write("Luften aradığınız kişinin numarasını giriniz: ");
+        long num = long.Parse(Console.ReadLine());
+        if(NumarayaGoreAra(num))
+        {
+          for(int i = 0; i < this.rehber.Count; i++){
+            if(this.rehber[i].Numara == num){
+              bulunanKişiler.Add(this.rehber[i]);
+            }
+          }
+        }
+        else
+        {
+          Console.WriteLine("Aradığınız krtiterlere uygun veri rehberde bulunamadı. Lütfen bir seçim yapınız.");
+          Console.WriteLine("* Menüye dönmek için         : (1)");
+          Console.WriteLine("* Yeniden denemek için       : (2)");
+          string scnk = Console.ReadLine();
+          if(scnk.Equals("1")) return;
+          else if(scnk.Equals("2")) RehberdeAramaYapma();
+          else Console.WriteLine("Yanlis secim !");
+        }
+      }
+      else                      // Yanlış seçenek
+      {
+        Console.WriteLine("Yanlis secenek !");
+      }
+      
+      Console.WriteLine("Arama Sonuçlarınız:");
+      Console.WriteLine("**********************************************");
+
+      KişiListesiEkranaYazdır(bulunanKişiler);
     }
   }
 }
