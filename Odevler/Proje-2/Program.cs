@@ -15,6 +15,8 @@ namespace Proje_2
             };
 
             Board board = new Board();
+
+            
         }
     }
 }
