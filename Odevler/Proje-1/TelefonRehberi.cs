@@ -85,13 +85,21 @@ namespace Proje_1
       {
         int idx = returnIndexIsimSoyisim(input);
         // Numarayı güncelle.
-        Console.Write(this.rehber[idx].Isim + this.rehber[idx].Soyisim + " adli kisinin yeni numarasini giriniz: ");
+        string isimSoyisim = this.rehber[idx].Isim + " " +  this.rehber[idx].Soyisim;
+        Console.Write(isimSoyisim + " adli kisinin yeni numarasini giriniz: ");
+        long yeniNumara = long.Parse(Console.ReadLine());
+        this.rehber[idx].Numara = yeniNumara;
+        Console.WriteLine(isimSoyisim + " adli kisinin numarasi basariyla guncellendi.\n");
       }
       else
       {
         Console.WriteLine("Aradığınız krtiterlere uygun veri rehberde bulunamadı. Lütfen bir seçim yapınız.");
         Console.WriteLine("* Güncellemeyi sonlandırmak için    : (1)");
         Console.WriteLine("* Yeniden denemek için              : (2)");
+        string scnk = Console.ReadLine();
+        if(scnk.Equals("1")) return;
+        else if(scnk.Equals("2")) NumaraGüncelle();
+        else Console.WriteLine("Yanlis secim !");
       }
     }
 
@@ -111,9 +119,17 @@ namespace Proje_1
       Console.WriteLine();
     }
 
-    public bool RehberdeAramaYapma()
+    public List<int> RehberdeAramaYapma()
     {
-      return false;
+      List<int> idxs = new List<int>();
+
+      Console.WriteLine();
+
+      for(){
+        
+      }
+
+      return idxs;
     }
   }
 }
