@@ -37,13 +37,39 @@ namespace Proje_2
     }
     internal void BoardListele()
     {
-      Console.WriteLine("TEST START");
-      Console.WriteLine(todo.Isim);
-      foreach(var todo in todo.Kartlar)
+      Console.WriteLine();
+
+      PrintKartLine(todo);
+      Console.WriteLine("\n");
+
+      PrintKartLine(inProgress);
+      Console.WriteLine("\n");
+
+      PrintKartLine(done);
+      Console.WriteLine();
+    }
+
+    private void PrintKartLine(Line line)
+    {
+      Console.WriteLine(line.Isim);
+      Console.WriteLine("************************");
+      if(line.Kartlar.Count <= 0)
       {
-        Console.WriteLine(todo);
+        Console.WriteLine("~ BOŞ ~");
       }
-      Console.WriteLine("TEST END");
+      else
+      {
+        int counter = 1;
+        foreach(var l in line.Kartlar)
+        {
+          Console.WriteLine("Başlık       :" + l.Başlık);
+          Console.WriteLine("İçerik       :" + l.Içerik);
+          Console.WriteLine("Atanan Kişi  :" + l.AtananKişi.Isim);
+          Console.WriteLine("Büyüklük     :" + l.Büyüklük);
+          if(counter < line.Kartlar.Count) Console.WriteLine("-");
+          counter++;
+        }
+      }
     }
 
     internal void KartEkle()
