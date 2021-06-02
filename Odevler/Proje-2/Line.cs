@@ -10,5 +10,10 @@ namespace Proje_2
 
     public string Isim { get => isim; set => isim = value; }
     public List<Kart> Kartlar { get => kartlar; set => kartlar = value; }
+
+    public Line()
+    {
+      kartlar = new List<Kart>();
+    }
   }
 }
