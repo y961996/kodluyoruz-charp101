@@ -74,7 +74,34 @@ namespace Proje_2
 
     internal void KartEkle()
     {
-      throw new NotImplementedException();
+      Console.Write("Başlık Giriniz                                  :");
+      string başlık = Console.ReadLine();
+
+      Console.Write("İçerik Giriniz                                  :");
+      string içerik = Console.ReadLine();
+
+      Console.Write("Büyüklük Seçiniz -> XS(1),S(2),M(3),L(4),XL(5)  :");
+      KartBüyüklük büyüklük = (KartBüyüklük)int.Parse(Console.ReadLine());
+
+      Console.Write("Kişi Seçiniz -> (ID)                            :");
+      int id = int.Parse(Console.ReadLine());
+      int found = -1;
+      for(int i = 0; i < takımdakiKişiler.Length; i++)
+      {
+        if(takımdakiKişiler[i].Id == id)
+        {
+          found = takımdakiKişiler[i].Id;
+          break;
+        } 
+      }
+
+      if(found == -1) 
+      {
+        Console.WriteLine("Hatali kullanici ID'si girdiniz. İşlem sonlandiriliyor...");
+        return;
+      }
+
+      todo.Kartlar.Add(new Kart(başlık, içerik, takımdakiKişiler[found], büyüklük));
     }
 
     internal void KartSil()

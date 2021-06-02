@@ -24,7 +24,7 @@ namespace Proje_2{
 
   public enum KartBüyüklük
   {
-    XS,
+    XS = 1,
     S,
     M,
     L,
