@@ -12,6 +12,14 @@ namespace Proje_2{
     public string Içerik { get => içerik; set => içerik = value; }
     public Kişi AtananKişi { get => atananKişi; set => atananKişi = value; }
     public KartBüyüklük Büyüklük { get => büyüklük; set => büyüklük = value; }
+
+    public Kart(string başlık, string içerik, Kişi atananKişi, KartBüyüklük büyüklük)
+    {
+      this.başlık = başlık;
+      this.içerik = içerik;
+      this.atananKişi = atananKişi;
+      this.büyüklük = büyüklük;
+    }
   }
 
   public enum KartBüyüklük

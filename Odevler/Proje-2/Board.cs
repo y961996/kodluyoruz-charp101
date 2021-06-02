@@ -14,14 +14,34 @@ namespace Proje_2
 
     public Board()
     {
-      Kart defaultKart1 = new Kart();
-      Kart defaultKart2 = new Kart();  
-      Kart defaultKart3 = new Kart();
+      Kart defaultKart1 = new Kart("Başlık1", "İçerik çok dolu değil.", kişiler()[0], KartBüyüklük.S);
+      Kart defaultKart2 = new Kart("Başlık2", "İçerik çok dolu.", kişiler()[1], KartBüyüklük.L);  
+      Kart defaultKart3 = new Kart("Başlık3", "İçerik boş.", kişiler()[3], KartBüyüklük.XS);
+
+      todo.Kartlar.Add(defaultKart1);
+      todo.Kartlar.Add(defaultKart3);
+
+      InProgress.Kartlar.Add(defaultKart2);
     }
 
+    internal Kişi[] kişiler()
+    {
+      Kişi[] takımdakiKişiler = {
+        new Kişi(0, "Ümit Tosun"),
+        new Kişi(1, "Tevfik Sokullu"),
+        new Kişi(2, "Burçin Özoguz"),
+        new Kişi(3, "Sabah Gülek"),
+        new Kişi(4, "Esen Akbulut")
+      };
+      return takımdakiKişiler;
+    }
     internal void BoardListele()
     {
-      throw new NotImplementedException();
+      Console.WriteLine(todo.Isim);
+      foreach(var todo in todo.Kartlar)
+      {
+        Console.WriteLine(todo);
+      }
     }
 
     internal void KartEkle()
