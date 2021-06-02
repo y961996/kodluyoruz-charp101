@@ -26,9 +26,9 @@ namespace Proje_2
       Kart defaultKart2 = new Kart("Başlık2", "İçerik çok dolu.", takımdakiKişiler[1], KartBüyüklük.L);  
       Kart defaultKart3 = new Kart("Başlık3", "İçerik boş.", takımdakiKişiler[3], KartBüyüklük.XS);
 
-      todo = new Line();
-      inProgress = new Line();
-      done = new Line();
+      todo = new Line("TODO Line");
+      inProgress = new Line("IN PROGRESS Line");
+      done = new Line("DONE Line");
 
       todo.Kartlar.Add(defaultKart1);
       todo.Kartlar.Add(defaultKart3);
@@ -37,11 +37,13 @@ namespace Proje_2
     }
     internal void BoardListele()
     {
+      Console.WriteLine("TEST START");
       Console.WriteLine(todo.Isim);
       foreach(var todo in todo.Kartlar)
       {
         Console.WriteLine(todo);
       }
+      Console.WriteLine("TEST END");
     }
 
     internal void KartEkle()

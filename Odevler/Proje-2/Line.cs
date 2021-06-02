@@ -11,8 +11,9 @@ namespace Proje_2
     public string Isim { get => isim; set => isim = value; }
     public List<Kart> Kartlar { get => kartlar; set => kartlar = value; }
 
-    public Line()
+    public Line(string isim)
     {
+      this.isim = isim;
       kartlar = new List<Kart>();
     }
   }
