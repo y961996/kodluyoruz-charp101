@@ -44,7 +44,7 @@ namespace Proje_2
                     break;
                 case 4:
                     board.KartTaşı();
-                    break;;
+                    break;
                 default:
                     Console.WriteLine("Geçersiz bir seçim yaptınız!");
                     break;

@@ -154,7 +154,179 @@ namespace Proje_2
 
     internal void KartTaşı()
     {
-      throw new NotImplementedException();
+      Console.WriteLine("Öncelikle taşımak istediğiniz kartı seçmeniz gerekiyor.");
+      Console.Write("Lütfen kart başlığını yazınız: ");
+      string başlık = Console.ReadLine();
+      if(!KartAra(başlık))
+      {
+        Console.WriteLine("Aradığınız krtiterlere uygun kart board'da bulunamadı. Lütfen bir seçim yapınız.");
+        Console.WriteLine("* Taşımayı sonlandırmak için : (1)");
+        Console.WriteLine("* Yeniden denemek için : (2)");
+        string option = Console.ReadLine();
+        if(option.Equals("1")) return;
+        else if(option.Equals("2")) KartTaşı();
+        else
+        {
+          Console.WriteLine("Yanlis secim !");
+          return;
+        }
+      }
+      else
+      {
+        Kart kart = KartıBul(başlık);
+        Line line = KartLineBul(başlık);
+        Console.WriteLine("Bulunan Kart Bilgileri:");
+        Console.WriteLine("**************************************");
+        Console.WriteLine("Başlık      :" + kart.Başlık);
+        Console.WriteLine("İçerik      :" + kart.Içerik);
+        Console.WriteLine("Atanan Kişi :" + kart.AtananKişi.Isim);
+        Console.WriteLine("Büyüklük    :" + kart.Büyüklük);
+        Console.WriteLine("Line        :" + line.Isim);
+
+        Console.WriteLine("Lütfen taşımak istediğiniz Line'ı seçiniz: ");
+        Console.WriteLine("(1) TODO");
+        Console.WriteLine("(2) IN PROGRESS");
+        Console.WriteLine("(3) DONE");
+        int taşınacakLine = int.Parse(Console.ReadLine());
+
+        KartTaşıHandler(başlık, taşınacakLine);
+
+        BoardListele();
+      }
+    }
+
+    private void KartTaşıHandler(string başlık, int line)
+    {
+      foreach(var k in todo.Kartlar)
+      {
+        if(k.Başlık.Equals(başlık))
+        {
+          if(line == 1)
+          {
+            todo.Kartlar.Add(k);
+            todo.Kartlar.Remove(k);
+            break;
+
+          }
+          else if(line == 2)
+          {
+            inProgress.Kartlar.Add(k);
+            todo.Kartlar.Remove(k);
+            break;
+          }
+          else if(line == 3)
+          {
+            done.Kartlar.Add(k);
+            todo.Kartlar.Remove(k);
+            break;
+          }
+          else
+          {
+            Console.WriteLine("Yanlış Line seçtiniz.");
+            break;
+          }
+        }
+      }
+
+      foreach(var k in inProgress.Kartlar)
+      {
+        if(k.Başlık.Equals(başlık))
+        {
+          if(line == 1)
+          {
+            todo.Kartlar.Add(k);
+            inProgress.Kartlar.Remove(k);
+            break;
+          }
+          else if(line == 2)
+          {
+            inProgress.Kartlar.Add(k);
+            inProgress.Kartlar.Remove(k);
+            break;
+          }
+          else if(line == 3)
+          {
+            done.Kartlar.Add(k);
+            inProgress.Kartlar.Remove(k);
+            break;
+          }
+          else
+          {
+            Console.WriteLine("Yanlış Line seçtiniz.");
+            break;
+          }
+        } 
+      }
+
+      foreach(var k in done.Kartlar)
+      {
+        if(k.Başlık.Equals(başlık))
+        {
+          if(line == 1)
+          {
+            todo.Kartlar.Add(k);
+            done.Kartlar.Remove(k);
+            break;
+          }
+          else if(line == 2)
+          {
+            inProgress.Kartlar.Add(k);
+            done.Kartlar.Remove(k);
+            break;
+          }
+          else if(line == 3)
+          {
+            done.Kartlar.Add(k);
+            done.Kartlar.Remove(k);
+            break;
+          }
+          else
+          {
+            Console.WriteLine("Yanlış Line seçtiniz.");
+            break;
+          }
+        }
+      }
+    }
+
+    private Line KartLineBul(string başlık)
+    {
+      foreach(var k in todo.Kartlar)
+      {
+        if(k.Başlık.Equals(başlık)) return todo;
+      }
+
+      foreach(var k in inProgress.Kartlar)
+      {
+        if(k.Başlık.Equals(başlık)) return inProgress;
+      }
+
+      foreach(var k in done.Kartlar)
+      {
+        if(k.Başlık.Equals(başlık)) return done;
+      }
+
+      return null;
+    }
+
+    private Kart KartıBul(string başlık)
+    {
+      foreach(var k in todo.Kartlar)
+      {
+        if(k.Başlık.Equals(başlık)) return k;
+      }
+
+      foreach(var k in inProgress.Kartlar)
+      {
+        if(k.Başlık.Equals(başlık)) return k;
+      }
+
+      foreach(var k in done.Kartlar)
+      {
+        if(k.Başlık.Equals(başlık)) return k;
+      }
+
+      return null;
     }
   }
 }
