@@ -26,6 +26,10 @@ namespace Proje_2
       Kart defaultKart2 = new Kart("Başlık2", "İçerik çok dolu.", takımdakiKişiler[1], KartBüyüklük.L);  
       Kart defaultKart3 = new Kart("Başlık3", "İçerik boş.", takımdakiKişiler[3], KartBüyüklük.XS);
 
+      todo = new Line();
+      inProgress = new Line();
+      done = new Line();
+
       todo.Kartlar.Add(defaultKart1);
       todo.Kartlar.Add(defaultKart3);
 
