@@ -106,7 +106,50 @@ namespace Proje_2
 
     internal void KartSil()
     {
-      throw new NotImplementedException();
+      Console.WriteLine("Öncelikle silmek istediğiniz kartı seçmeniz gerekiyor.");
+      Console.Write("Lütfen kart başlığını yazınız: ");
+      string başlık = Console.ReadLine();
+      if(!KartAra(başlık))
+      {
+        Console.WriteLine("Aradığınız krtiterlere uygun kart board'da bulunamadı. Lütfen bir seçim yapınız.");
+        Console.WriteLine("* Silmeyi sonlandırmak için : (1)");
+        Console.WriteLine("* Yeniden denemek için : (2)");
+        string option = Console.ReadLine();
+        if(option.Equals("1")) return;
+        else if(option.Equals("2")) KartSil();
+        else
+        {
+          Console.WriteLine("Yanlis secim !");
+          return;
+        }
+      }
+      else
+      {
+        todo.Kartlar.RemoveAll(x => x.Başlık.Equals(başlık));
+        inProgress.Kartlar.RemoveAll(x => x.Başlık.Equals(başlık));
+        done.Kartlar.RemoveAll(x => x.Başlık.Equals(başlık));
+      }
+
+    }
+
+    private bool KartAra(string başlık)
+    {
+      foreach(var k in todo.Kartlar)
+      {
+        if(k.Başlık.Equals(başlık)) return true;
+      }
+
+      foreach(var k in inProgress.Kartlar)
+      {
+        if(k.Başlık.Equals(başlık)) return true;
+      }
+
+      foreach(var k in done.Kartlar)
+      {
+        if(k.Başlık.Equals(başlık)) return true;
+      }
+
+      return false;
     }
 
     internal void KartTaşı()
