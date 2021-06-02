@@ -114,9 +114,9 @@ namespace Proje_2
         Console.WriteLine("Aradığınız krtiterlere uygun kart board'da bulunamadı. Lütfen bir seçim yapınız.");
         Console.WriteLine("* Silmeyi sonlandırmak için : (1)");
         Console.WriteLine("* Yeniden denemek için : (2)");
-        string option = Console.ReadLine();
-        if(option.Equals("1")) return;
-        else if(option.Equals("2")) KartSil();
+        string choice = Console.ReadLine();
+        if(choice.Equals("1")) return;
+        else if(choice.Equals("2")) KartSil();
         else
         {
           Console.WriteLine("Yanlis secim !");
@@ -162,9 +162,9 @@ namespace Proje_2
         Console.WriteLine("Aradığınız krtiterlere uygun kart board'da bulunamadı. Lütfen bir seçim yapınız.");
         Console.WriteLine("* Taşımayı sonlandırmak için : (1)");
         Console.WriteLine("* Yeniden denemek için : (2)");
-        string option = Console.ReadLine();
-        if(option.Equals("1")) return;
-        else if(option.Equals("2")) KartTaşı();
+        string choice = Console.ReadLine();
+        if(choice.Equals("1")) return;
+        else if(choice.Equals("2")) KartTaşı();
         else
         {
           Console.WriteLine("Yanlis secim !");
@@ -205,25 +205,25 @@ namespace Proje_2
           {
             todo.Kartlar.Add(k);
             todo.Kartlar.Remove(k);
-            break;
+            return;
 
           }
           else if(line == 2)
           {
             inProgress.Kartlar.Add(k);
             todo.Kartlar.Remove(k);
-            break;
+            return;
           }
           else if(line == 3)
           {
             done.Kartlar.Add(k);
             todo.Kartlar.Remove(k);
-            break;
+            return;
           }
           else
           {
             Console.WriteLine("Yanlış Line seçtiniz.");
-            break;
+            return;
           }
         }
       }
@@ -236,24 +236,24 @@ namespace Proje_2
           {
             todo.Kartlar.Add(k);
             inProgress.Kartlar.Remove(k);
-            break;
+            return;
           }
           else if(line == 2)
           {
             inProgress.Kartlar.Add(k);
             inProgress.Kartlar.Remove(k);
-            break;
+            return;
           }
           else if(line == 3)
           {
             done.Kartlar.Add(k);
             inProgress.Kartlar.Remove(k);
-            break;
+            return;
           }
           else
           {
             Console.WriteLine("Yanlış Line seçtiniz.");
-            break;
+            return;
           }
         } 
       }
@@ -266,24 +266,24 @@ namespace Proje_2
           {
             todo.Kartlar.Add(k);
             done.Kartlar.Remove(k);
-            break;
+            return;
           }
           else if(line == 2)
           {
             inProgress.Kartlar.Add(k);
             done.Kartlar.Remove(k);
-            break;
+            return;
           }
           else if(line == 3)
           {
             done.Kartlar.Add(k);
             done.Kartlar.Remove(k);
-            break;
+            return;
           }
           else
           {
             Console.WriteLine("Yanlış Line seçtiniz.");
-            break;
+            return;
           }
         }
       }

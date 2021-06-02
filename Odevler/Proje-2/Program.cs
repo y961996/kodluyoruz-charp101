@@ -14,7 +14,7 @@ namespace Proje_2
                 PrintMenu();
                 option = int.Parse(Console.ReadLine());
                 handleOption(option, board);
-            } while (option > 0 && option < 4);
+            } while (option > 0 && option <= 4);
 
             Console.WriteLine("Geçersiz seçim! Programdan çıkılıyor...");
         }
@@ -29,9 +29,9 @@ namespace Proje_2
             Console.WriteLine("(4) Kart Taşımak");
         }
 
-        public static void handleOption(int option, Board board)
+        public static void handleOption(int opt, Board board)
         {
-            switch (option)
+            switch (opt)
             {
                 case 1:
                     board.BoardListele();
